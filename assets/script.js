@@ -3,7 +3,7 @@
 //Create the Arrays
 var Upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 var Lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-var Special = ["\\","\b","\r","\"","\f","\n","\'","\t"]
+var Special = ["U+0020","!","\"","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","\\","]","^","_","`","{","|","}","~"]
 var Numbers = ["0","1","2","3","4","5","6","7","8","9"]
 
 // Declare the variables
@@ -38,16 +38,26 @@ function generatePassword() {
       var SpcChar = (window.confirm("Click OK to confirm including special characters."))
       var NmChar = (window.confirm("Click OK to confirm including numerical characters."))
 //Validate input and at least one character of each selected criteria is used
-  if (UpCase)
-  if (LwCase)
-  if (SpcChar)
-  if (NmChar)
-
+  var ChosenCharacters = []
+  if (UpCase) {
+    ChosenCharacters = ChosenCharacters + Upper
+  }
+  if (LwCase) {
+    ChosenCharacters = ChosenCharacters + Lower
+  }
+  if (SpcChar) {
+    ChosenCharacters = ChosenCharacters + Special
+  }
+  if (NmChar) {
+    ChosenCharacters = ChosenCharacters + Numbers
+  }
 //Display generated password(return)
   var DisplayPass = ""
 
-  for (var i = 0; i++; i < passLength)
-  return "Placeholder Password!"
+  for (var i = 0; i < passLength; i++) {
+    DisplayPass = DisplayPass + ChosenCharacters[Math.floor(Math.random() * ChosenCharacters.length)]
+  }
+  return DisplayPass
 }
 
 
