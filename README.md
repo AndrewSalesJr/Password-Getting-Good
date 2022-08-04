@@ -3,7 +3,7 @@
 ## Project Overview
 Password-Getting-Better is a password generator project that asks users a series a questions about how they would like their password to be before it is generated. These questions ask if the user would like to include uppercase, lowercase, special and/or numerical characters in their password. The prompts should pop up after clicking on the "Generate Password" button. My job is to complete the starter code which has not defined the function that will be used to bring up the prompts and generate the password.
 
-##
+## https://andrewsalesjr.github.io/Password-Getting-Good/
 ![Web capture_3-8-2022_231943_](https://user-images.githubusercontent.com/93755640/182762347-c812da05-1b3d-4d99-a5ec-3ff3f27e1e03.jpeg)
 
 ## Detailed Changes
