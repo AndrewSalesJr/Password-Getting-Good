@@ -31,10 +31,22 @@ function generatePassword() {
   var SpcChar = (window.confirm("Click OK to confirm including special characters."))
 
   var NmChar = (window.confirm("Click OK to confirm including numerical characters."))
+    // Loop prompts if all display false
+    while(UpCase === false && LwCase === false && SpcChar === false && NmChar === false)
+      var UpCase = (window.confirm("Click OK to confirm including uppercase characters."))
+      var LwCase = (window.confirm("Click OK to confirm including lowercase characters."))  
+      var SpcChar = (window.confirm("Click OK to confirm including special characters."))
+      var NmChar = (window.confirm("Click OK to confirm including numerical characters."))
 //Validate input and at least one character of each selected criteria is used
+  if (UpCase)
+  if (LwCase)
+  if (SpcChar)
+  if (NmChar)
 
 //Display generated password(return)
+  var DisplayPass = ""
 
+  for (var i = 0; i++; i < passLength)
   return "Placeholder Password!"
 }
 
